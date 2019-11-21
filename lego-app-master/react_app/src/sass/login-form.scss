@@ -1,0 +1,83 @@
+#login-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 70%;
+  height: 240px;
+
+  #logo {
+    position: relative;
+    height: 70px;
+    width: 70px;
+    background: transparent;
+    border: 0;
+    margin: 0 auto;
+    &:before {
+      @include font-icon($icon-jedi-order);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate3d(-50%, -50%, 0);
+      color: $s1;
+      font-size: 70px;
+      line-height: 70px;
+      animation: spin 5s infinite linear;
+    }
+  }
+
+  .form-contents {
+    display: flex;
+    flex-direction: column;
+    height: 140px;
+    justify-content: space-between;
+
+    input {
+      background: transparent;
+      border: 0;
+      border-bottom: 1px solid $s1;
+    }
+
+    #form-contents_button-login {
+      display: block;
+      width: 100%;
+      max-width: 300px;
+      margin: 0 auto;
+      padding: 10px;
+      color: $m1;
+      text-transform: uppercase;
+      background: transparent;
+      border: 1px solid $m1;
+      border-radius: 5px;
+      transition: 0.5s;
+      cursor: pointer;
+    }
+
+    button#form-contents_button-signin {
+      display: block;
+      width: 100%;
+      max-width: 300px;
+      margin: 0 auto;
+      padding: 10px;
+      color: $s3;
+      text-transform: uppercase;
+      background: $m1;
+      border: 1px solid $m1;
+      border-radius: 5px;
+      transition: 0.5s;
+      cursor: pointer;
+    }
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: translate3d(-50%, -50%, 0) rotateY(0deg);
+  }
+  to {
+    transform: translate3d(-50%, -50%, 0) rotateY(180deg);
+  }
+}

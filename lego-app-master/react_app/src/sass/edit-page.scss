@@ -1,0 +1,19 @@
+#add-set {
+  #prevImage-close {
+    margin: 0;
+    height: 0;
+  }
+
+  #prevImage {
+    height: 115px;
+
+    img {
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+      background: #fff;
+      border-radius: 20px;
+      object-fit: contain;
+    }
+  }
+}
